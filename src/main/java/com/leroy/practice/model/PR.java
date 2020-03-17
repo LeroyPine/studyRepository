@@ -1,5 +1,7 @@
 package com.leroy.practice.model;
 
+import java.util.List;
+
 /**
  * <p></p>
  * <p>
@@ -15,4 +17,24 @@ package com.leroy.practice.model;
  * @since 1.0
  */
 public class PR {
+
+    private List<User>  users;
+
+    private List<String>  as;
+
+    public List<String> getAs() {
+        return as;
+    }
+
+    public void setAs(List<String> as) {
+        this.as = as;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
 }

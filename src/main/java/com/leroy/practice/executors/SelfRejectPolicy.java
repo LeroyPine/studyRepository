@@ -1,5 +1,8 @@
 package com.leroy.practice.executors;
 
+import java.util.concurrent.RejectedExecutionHandler;
+import java.util.concurrent.ThreadPoolExecutor;
+
 /**
  * <p></p>
  * <p>
@@ -14,5 +17,11 @@ package com.leroy.practice.executors;
  * @date Created in 2020年03月07日 10:22
  * @since 1.0
  */
-public class SelfRejectPolicy {
+public class SelfRejectPolicy implements RejectedExecutionHandler {
+
+
+    @Override
+    public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
+
+    }
 }

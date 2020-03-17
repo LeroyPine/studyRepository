@@ -15,4 +15,6 @@ package com.leroy.practice.designmode.facotry;
  * @since 1.0
  */
 public class AbstractFactory {
+
+
 }

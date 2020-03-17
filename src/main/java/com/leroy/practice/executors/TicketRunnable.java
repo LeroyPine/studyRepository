@@ -1,3 +1,4 @@
+/*
 package com.leroy.practice.executors;
 
 import org.springframework.data.redis.core.RedisTemplate;
@@ -11,6 +12,8 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
+*/
+/**//*
 
 public class TicketRunnable implements Runnable {
     @Override
@@ -18,7 +21,8 @@ public class TicketRunnable implements Runnable {
 
     }
 
-   /* @Resource
+   */
+/* @Resource
     private StringRedisTemplate stringRedisTemplate;
 
     @Resource
@@ -112,13 +116,17 @@ public class TicketRunnable implements Runnable {
     }
 
 
-    *//**
+    *//*
+*/
+/**
      *
      * @param lockKey           锁的key
      * @param requestId         请求唯一标识
      * @param expireTime        锁过期时间
      * @return
      *//*
+*/
+/*
     private boolean innerTryLock(String lockKey,String requestId,Long expireTime) {
         boolean flag = false;
         try {
@@ -138,10 +146,14 @@ public class TicketRunnable implements Runnable {
     }
 
 
-    *//**
+    *//*
+*/
+/**
      * 释放锁
      * @param lockKey
      *//*
+*/
+/*
     public void realseLock(String lockKey) {
         try {
             String localRequsetId = stringRedisTemplate.opsForValue().get(lockKey);
@@ -163,6 +175,8 @@ public class TicketRunnable implements Runnable {
     private String getRequestId() {
         return UUID.randomUUID().toString();
     }
+*//*
+
 */
 /*
     @Override
@@ -178,5 +192,7 @@ public class TicketRunnable implements Runnable {
         }catch (Exception e){
             e.printStackTrace();
         }
-    }*/
+    }*//*
+
 }
+*/

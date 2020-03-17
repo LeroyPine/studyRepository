@@ -1,4 +1,4 @@
-import com.leroy.practice.MyIntergace;
+package com.leroy.practice.garabe;
 
 /**
  * <p></p>

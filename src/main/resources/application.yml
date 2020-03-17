@@ -1,3 +1,4 @@
+
 spring:
   redis:
     host: 127.0.0.1
@@ -11,14 +12,16 @@ spring:
         max-wait: -1
         min-idle: 0
   rabbitmq:
-    host: localhost
+    host: 10.16.9.34
     port: 5672
-    username: guest
-    password: guest
+    username: crm_rabbit_write
+    password: crm_rabbit_write
     publisher-confirms: true
-    virtual-host: /
+    virtual-host: crm
     listener:
       direct:
         acknowledge-mode: manual
       simple:
         acknowledge-mode: manual
+server:
+  port: 9999

@@ -1,5 +1,13 @@
 package com.leroy.practice.designmode.proxy;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+
 /**
  * <p></p>
  * <p>
@@ -14,5 +22,16 @@ package com.leroy.practice.designmode.proxy;
  * @date Created in 2020年03月17日 12:38
  * @since 1.0
  */
-public class DynamicSubject {
+@AllArgsConstructor
+@NoArgsConstructor
+public class DynamicSubject implements  InvocationHandler {
+
+    // 委托对象 目标对象昂
+    RealSubject realSubject;
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("before");
+        return method.invoke(realSubject,args);
+    }
 }

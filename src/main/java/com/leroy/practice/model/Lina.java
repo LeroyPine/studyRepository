@@ -1,5 +1,10 @@
 package com.leroy.practice.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * <p></p>
  * <p>
@@ -14,5 +19,15 @@ package com.leroy.practice.model;
  * @date Created in 2019年11月07日 20:51
  * @since 1.0
  */
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Lina {
+
+    private String name ;
+
+    private String phone;
+
+    private Leroy2 ler;
 }

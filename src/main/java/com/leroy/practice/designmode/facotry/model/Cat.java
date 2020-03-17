@@ -1,5 +1,9 @@
 package com.leroy.practice.designmode.facotry.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * <p></p>
  * <p>
@@ -14,5 +18,16 @@ package com.leroy.practice.designmode.facotry.model;
  * @date Created in 2020年03月01日 12:27
  * @since 1.0
  */
-public class Cat {
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class Cat implements Animal{
+
+
+    private String color;
+
+    @Override
+    public String getName() {
+        return "123";
+    }
 }

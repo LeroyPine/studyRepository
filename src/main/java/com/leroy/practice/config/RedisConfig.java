@@ -1,3 +1,4 @@
+/*
 package com.leroy.practice.config;
 
 
@@ -42,3 +43,4 @@ public class RedisConfig extends CachingConfigurerSupport {
         return template;
     }
 }
+*/

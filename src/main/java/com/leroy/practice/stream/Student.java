@@ -1,5 +1,11 @@
 package com.leroy.practice.stream;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+
 /**
  * <p></p>
  * <p>
@@ -14,5 +20,15 @@ package com.leroy.practice.stream;
  * @date Created in 2020年03月09日 10:03
  * @since 1.0
  */
-public class Student {
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Student implements Serializable {
+
+    private String name;
+    private Integer age;
+    private String height;
+    private String hobby;
+
+
 }

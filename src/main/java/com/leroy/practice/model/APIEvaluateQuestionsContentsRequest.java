@@ -3,8 +3,9 @@
  * zres
  */
 
-package com.ziroom.hestia.api.dto.request;
+package com.leroy.practice.model;
 
+import lombok.Builder;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.NotNull;
@@ -14,6 +15,7 @@ import java.util.List;
  * Created by yaowg on 2017/10/26
  * @author yaowg
  */
+@Builder
 public class APIEvaluateQuestionsContentsRequest {
 
 

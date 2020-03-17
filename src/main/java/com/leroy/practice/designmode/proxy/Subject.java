@@ -15,4 +15,8 @@ package com.leroy.practice.designmode.proxy;
  * @since 1.0
  */
 public interface Subject {
+
+
+
+    void learn();
 }

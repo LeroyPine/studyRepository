@@ -1,4 +1,4 @@
-package com.ziroom.evaluate.zry.repository.es.entity;
+package com.leroy.practice.es;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,6 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.io.Serializable;
-import java.net.Inet4Address;
 import java.util.List;
 
 /**
@@ -79,18 +78,18 @@ public class ZryEvaluateEntity implements Serializable{
     @Field(type = FieldType.Text)
     private String nonSuggest;
 
-    @Field(type = FieldType.Nested)
+  /*  @Field(type = FieldType.Nested)
     private List<TagEntity> zoTagList;
     @Field(type = FieldType.Nested)
     private List<TagEntity> productTagList;
-
+*/
     @Field(type = FieldType.Keyword)
     private List<String> picUrl;
     @Field(type = FieldType.Text)
     private String callBackContent;
 
-    public static class field_name{
+    /*public static class field_name{
         public static String evaluateTime="evaluateTime";
-    }
+    }*/
 
 }

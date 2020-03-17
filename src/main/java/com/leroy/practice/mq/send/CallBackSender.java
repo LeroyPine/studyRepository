@@ -1,3 +1,4 @@
+/*
 package com.leroy.practice.mq.send;
 
 import org.springframework.amqp.core.Message;
@@ -43,3 +44,4 @@ public class CallBackSender implements RabbitTemplate.ConfirmCallback,RabbitTemp
         this.rabbitTemplate.convertAndSend("exchange",topic,message,correlationData);
     }
 }
+*/

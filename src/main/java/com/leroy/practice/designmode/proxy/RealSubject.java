@@ -1,5 +1,7 @@
 package com.leroy.practice.designmode.proxy;
 
+import org.springframework.stereotype.Component;
+
 /**
  * <p></p>
  * <p>
@@ -14,5 +16,10 @@ package com.leroy.practice.designmode.proxy;
  * @date Created in 2020年03月15日 22:02
  * @since 1.0
  */
-public class RealSubject {
+@Component
+public class RealSubject implements Subject{
+    @Override
+    public void learn() {
+        System.out.println("我是真实对象");
+    }
 }

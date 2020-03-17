@@ -1,6 +1,8 @@
-package com.ziroom.evaluate.model.evaluate.old;
+package com.leroy.practice.model;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 

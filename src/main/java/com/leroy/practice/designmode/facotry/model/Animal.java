@@ -14,5 +14,8 @@ package com.leroy.practice.designmode.facotry.model;
  * @date Created in 2020年03月01日 12:25
  * @since 1.0
  */
-public class Animal {
+public interface Animal {
+
+
+    String getName();
 }

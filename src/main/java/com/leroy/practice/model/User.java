@@ -15,6 +15,8 @@ public class User implements Serializable {
 
     private String sex;
 
+    private long age;
+
     public String getUserName() {
         return userName;
     }

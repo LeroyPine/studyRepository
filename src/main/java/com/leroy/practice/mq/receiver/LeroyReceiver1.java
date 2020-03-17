@@ -1,3 +1,4 @@
+/*
 package com.leroy.practice.mq.receiver;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
@@ -12,3 +13,4 @@ public class LeroyReceiver1 {
         System.out.println("Receiver1:"+msg);
     }
 }
+*/

@@ -1,5 +1,9 @@
 package com.leroy.practice.designmode.facotry;
 
+import com.leroy.practice.designmode.facotry.model.Animal;
+import com.leroy.practice.designmode.facotry.model.Cat;
+import com.leroy.practice.designmode.facotry.model.Dog;
+
 /**
  * <p></p>
  * <p>
@@ -15,4 +19,17 @@ package com.leroy.practice.designmode.facotry;
  * @since 1.0
  */
 public class SimpleFactory {
+
+
+    public static Animal createAnimal(Animal animal) {
+        if (animal instanceof Cat) {
+            return new Cat();
+        }
+        if (animal instanceof Dog) {
+            return new Dog();
+        }
+        return null;
+
+
+    }
 }

@@ -1,4 +1,4 @@
-package com.leroy.practice;
+package com.leroy.practice.garabe;
 
 import javax.annotation.sql.DataSourceDefinition;
 

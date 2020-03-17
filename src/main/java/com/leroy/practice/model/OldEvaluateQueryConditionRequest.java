@@ -1,4 +1,4 @@
-package com.ziroom.evaluate.common.model.old;
+package com.leroy.practice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

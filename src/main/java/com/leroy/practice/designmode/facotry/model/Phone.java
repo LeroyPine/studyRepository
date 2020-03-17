@@ -14,5 +14,7 @@ package com.leroy.practice.designmode.facotry.model;
  * @date Created in 2020年03月01日 16:50
  * @since 1.0
  */
-public interface Phone {
+public abstract class Phone {
+
+    public abstract void call();
 }

@@ -1,10 +1,9 @@
-package com.ziroom.evaluate.model.evaluate.old;
+package com.leroy.practice.model;
 
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.apache.dubbo.config.annotation.Service;
 
 import java.io.Serializable;
 import java.util.List;

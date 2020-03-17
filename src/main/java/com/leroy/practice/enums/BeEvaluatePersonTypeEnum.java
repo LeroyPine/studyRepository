@@ -1,6 +1,5 @@
-package com.ziroom.evaluate.model.evaluate.enums;
+package com.leroy.practice.enums;
 
-import com.asura.framework.commons.util.Check;
 
 /**
  * <p>被评价人类型</p>
@@ -52,7 +51,6 @@ public enum BeEvaluatePersonTypeEnum {
     }
 
     public static BeEvaluatePersonTypeEnum getByCode(String code){
-        if (Check.isNullOrEmpty(code)) return null;
         for (BeEvaluatePersonTypeEnum beEvaluatePersonTypeEnum : BeEvaluatePersonTypeEnum.values()) {
             if (beEvaluatePersonTypeEnum.getCode().equals(code.trim())) {
                 return beEvaluatePersonTypeEnum;

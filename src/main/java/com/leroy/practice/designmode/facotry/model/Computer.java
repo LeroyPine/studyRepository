@@ -14,13 +14,7 @@ package com.leroy.practice.designmode.facotry.model;
  * @date Created in 2020年03月01日 16:50
  * @since 1.0
  */
-public class Computer {
-    private static Computer ourInstance = new Computer();
+public abstract class Computer {
 
-    public static Computer getInstance() {
-        return ourInstance;
-    }
-
-    private Computer() {
-    }
+    public abstract void work();
 }

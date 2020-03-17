@@ -1,5 +1,8 @@
 package com.leroy.practice.async;
 
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
+
 /**
  * <p></p>
  * <p>
@@ -14,5 +17,11 @@ package com.leroy.practice.async;
  * @date Created in 2019年08月22日 10:18
  * @since 1.0
  */
+@Service
 public class AsyncService {
+
+    @Async
+    public void anyncTest(){
+        System.out.println("asnyc");
+    }
 }
