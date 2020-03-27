@@ -24,4 +24,4 @@ spring:
       simple:
         acknowledge-mode: manual
 server:
-  port: 9999
+  port: 9898

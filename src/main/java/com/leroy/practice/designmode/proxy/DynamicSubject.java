@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+import java.util.Arrays;
 
 /**
  * <p></p>
@@ -31,7 +33,21 @@ public class DynamicSubject implements  InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("before");
-        return method.invoke(realSubject,args);
+        System.out.println("before:"+method.getName() + Arrays.toString(args));
+        Object invoke = method.invoke(realSubject, args);
+        System.out.println("end : " + invoke);
+        return invoke;
     }
+
+    public Object bind(Object obj){
+        return Proxy.newProxyInstance(realSubject.getClass().getClassLoader(),realSubject.getClass().getInterfaces(),this::invoke);
+    }
+
+
+  /*  public static void main(String[] args) {
+        DynamicSubject dynamicSubject = new DynamicSubject();
+        dynamicSubject.bind()
+    }
+*/
+
 }

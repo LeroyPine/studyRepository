@@ -39,7 +39,7 @@ public class AsyncTests {
 
 
     @Test
-    public void test1() {
+    public void test1() throws InterruptedException {
         System.out.println(1);
         System.out.println(2);
         System.out.println(3);
@@ -107,6 +107,13 @@ public class AsyncTests {
         System.out.println("成功条数:" + successTotal);
 
         System.out.println("失败条数:" + errorTotal);
+    }
+
+
+    @Test
+    public void test6() throws InterruptedException {
+    /*    asyncService.anyncTest();
+        asyncService.anyncTest1();*/
     }
 
 }

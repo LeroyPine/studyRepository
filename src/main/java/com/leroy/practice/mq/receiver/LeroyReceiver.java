@@ -30,6 +30,19 @@ public class LeroyReceiver {    //消费者
 
 
 
+    @RabbitListener( admin = "amqpAdmin",
+            bindings = @QueueBinding(
+                    key = "evaluate.status.LONGRENT_DAIKAN",
+                    value = @Queue(name = "leroy.test.LONGRENT_DAIKAN"),
+                    exchange = @Exchange(name = "crm.test", type = ExchangeTypes.TOPIC)
+            ))
+    public  void  process1(EvaluateStatusDto msg){
+        System.out.println(JSONObject.toJSONString(msg));
+        System.out.println("Receiver:"+msg);
+    }
+
+
+
 
 }
 
