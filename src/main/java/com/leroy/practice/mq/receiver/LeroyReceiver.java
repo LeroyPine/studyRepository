@@ -1,3 +1,4 @@
+/*
 
 package com.leroy.practice.mq.receiver;
 
@@ -46,3 +47,4 @@ public class LeroyReceiver {    //消费者
 
 }
 
+*/

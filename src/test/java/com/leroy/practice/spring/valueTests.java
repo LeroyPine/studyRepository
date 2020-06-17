@@ -1,6 +1,7 @@
-package com.leroy.practice;
+package com.leroy.practice.spring;
 
-import com.leroy.practice.service.TestService;
+import com.leroy.practice.spring.value.ValueAnnotation;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,22 +19,21 @@ import org.springframework.test.context.junit4.SpringRunner;
  *
  * @author luobs
  * @version 1.0
- * @date Created in 2019年08月24日 12:29
+ * @date Created in 2020年05月05日 15:37
  * @since 1.0
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class EsTest {
+@Slf4j
+public class valueTests {
 
 
     @Autowired
-    private TestService testService;
-
+    private ValueAnnotation valueAnnotation;
 
     @Test
     public void test(){
-        testService.test1();
+        Object o = valueAnnotation.valueAnn();
+        System.out.println(o);
     }
-
-
 }

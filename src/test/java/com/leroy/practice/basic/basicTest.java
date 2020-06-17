@@ -1,6 +1,7 @@
-package com.leroy.practice;
+package com.leroy.practice.basic;
 
-import com.leroy.practice.service.TestService;
+import com.leroy.practice.polymorphic.Son;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,22 +19,20 @@ import org.springframework.test.context.junit4.SpringRunner;
  *
  * @author luobs
  * @version 1.0
- * @date Created in 2019年08月24日 12:29
+ * @date Created in 2020年04月23日 15:45
  * @since 1.0
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class EsTest {
-
+@Slf4j
+public class basicTest {
 
     @Autowired
-    private TestService testService;
+    private Son son;
 
 
     @Test
-    public void test(){
-        testService.test1();
+    public void tst1(){
+        son.hello();
     }
-
-
 }

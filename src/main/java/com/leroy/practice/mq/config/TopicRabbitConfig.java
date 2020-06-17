@@ -1,3 +1,4 @@
+/*
 
 package com.leroy.practice.mq.config;
 
@@ -80,3 +81,4 @@ public class TopicRabbitConfig {
 
 }
 
+*/
