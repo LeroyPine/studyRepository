@@ -1,4 +1,7 @@
-package com.leroy.practice.vo;
+package com.leroy.practice;
+
+import lombok.Builder;
+import lombok.Data;
 
 /**
  * <p></p>
@@ -11,8 +14,12 @@ package com.leroy.practice.vo;
  *
  * @author luobs
  * @version 1.0
- * @date Created in 2020年06月17日 18:26
+ * @date Created in 2020年06月23日 14:30
  * @since 1.0
  */
-public class CompareIndicatorVO {
+@Data
+@Builder
+public class ServiceIndexBO {
+
+    private ServiceIndexResponse serviceIndexResponse;
 }

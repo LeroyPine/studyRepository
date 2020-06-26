@@ -1,43 +1,45 @@
 package com.leroy.practice.vo;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 /**
- * <p></p>
- * <p>
+ * <p>趋势图data</p>
+ *
  * <PRE>
  * <BR>    修改记录
  * <BR>-----------------------------------------------
  * <BR>    修改日期         修改人          修改内容
  * </PRE>
  *
- * @author luobs
+ * @author zhangxk
  * @version 1.0
- * @date Created in 2020年06月17日 14:01
+ * @date Created in 2020/06/17
  * @since 1.0
  */
 @Data
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class AtomIndicatorData {
+public class ChartDataVO {
 
     /**
-     * 编码
+     * 纵轴数值
      */
-    private String code;
+    private List<String> yAxis;
 
     /**
-     * 名称
+     * 图表名称
      */
-    private String name;
+    private String chartName;
 
     /**
-     * 值
+     * 纵轴最大值
      */
-    private String value;
+    private String maximum;
 
+    /**
+     * 纵轴最小值
+     */
+    private String minimum;
 }

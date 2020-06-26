@@ -16,27 +16,37 @@ import lombok.NoArgsConstructor;
  *
  * @author luobs
  * @version 1.0
- * @date Created in 2020年06月17日 15:27
+ * @date Created in 2020年06月17日 18:26
  * @since 1.0
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class TableVO {
+public class CompareIndicatorDataVO {
 
     /**
-     * 字段
+     * 显示文本
      */
-    private String code;
+    private String text;
 
     /**
-     * 字段名称
+     * 值
      */
-    private String name;
+    private String value;
 
     /**
-     * 排序
+     * 增加减少 率
      */
-    private Integer index;
+    private String rate;
+
+    /**
+     * 颜色
+     */
+    private String color;
+
+    /**
+     * 方向
+     */
+    private String direction;
 }

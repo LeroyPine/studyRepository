@@ -1,4 +1,4 @@
-package com.leroy.practice.vo;
+package com.leroy.practice.vo.module;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * <p></p>
  * <p>
- * <PRE>   tips: 客源转化数据
+ * <PRE>
  * <BR>    修改记录
  * <BR>-----------------------------------------------
  * <BR>    修改日期         修改人          修改内容
@@ -18,36 +18,33 @@ import java.util.List;
  *
  * @author luobs
  * @version 1.0
- * @date Created in 2020年06月17日 11:49
+ * @date Created in 2020年06月17日 19:13
  * @since 1.0
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CustomerConversionDataVO {
+public class TableOverviewVO {
 
     /**
-     * 更新时间标题
+     * 标题
      */
-    private String executionTimeTitle;
+    private String title;
 
     /**
-     * 转化数据指标集合
+     * 更新时间
      */
-    private List<AtomIndicatorData> baseDataList;
+    private String updateTimeStr;
+
+    /**
+     * 小问号
+     */
+    private String popTip;
 
 
     /**
-     * 客源转化漏斗数据集合
+     * 表格数据
      */
-    private List<FunnelDataVO> funnelDataList;
-
-
-    /**
-     * 渠道概览数据
-     */
-    private List<ChannelDataVO> channelDataList;
-
-
+    private List<List<Object>> tableData;
 }

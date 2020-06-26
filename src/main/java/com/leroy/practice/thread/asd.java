@@ -1,8 +1,6 @@
 package com.leroy.practice.thread;
 
 import com.alibaba.fastjson.JSONObject;
-import com.leroy.practice.vo.TableBodyVO;
-import com.leroy.practice.vo.TableHeaderVO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +25,9 @@ public class asd {
 
 
         List<Object> a = new ArrayList<>();
-
+/*
         a.add(TableHeaderVO.builder().text("白头").build());
-        a.add(TableBodyVO.builder().code("!@3124").text("asfas").build());
+        a.add(TableBodyVO.builder().code("!@3124").text("asfas").build());*/
 
         System.out.println(JSONObject.toJSONString(a));
     }

@@ -1,4 +1,4 @@
-package com.leroy.practice.vo;
+package com.leroy.practice.vo.module;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,23 +16,32 @@ import lombok.NoArgsConstructor;
  *
  * @author luobs
  * @version 1.0
- * @date Created in 2020年06月17日 15:27
+ * @date Created in 2020年06月17日 14:58
  * @since 1.0
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class TableHeaderVO {
+public class FunnelDataVO {
 
     /**
-     * 字段名称
+     * 编码
+     */
+    private String code;
+
+    /**
+     * 名称
      */
     private String text;
 
     /**
-     * 是否可以排序   1: 可以排序  0: 不可以排序
+     * 值
      */
-    private Integer isCanSort;
+    private String value;
 
+    /**
+     * 漏斗值
+     */
+    private String funnelValue;
 }

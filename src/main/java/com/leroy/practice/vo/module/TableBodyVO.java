@@ -1,4 +1,4 @@
-package com.leroy.practice.vo;
+package com.leroy.practice.vo.module;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,14 +16,14 @@ import lombok.NoArgsConstructor;
  *
  * @author luobs
  * @version 1.0
- * @date Created in 2020年06月17日 14:58
+ * @date Created in 2020年06月17日 19:17
  * @since 1.0
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class FunnelDataVO {
+public class TableBodyVO {
 
     /**
      * 编码
@@ -31,17 +31,12 @@ public class FunnelDataVO {
     private String code;
 
     /**
-     * 名称
+     * 字段名称
      */
-    private String name;
+    private String text;
 
     /**
-     * 值
+     * 是否可以排序   1: 可以点击 0: 不可以点击
      */
-    private String value;
-
-    /**
-     * 漏斗值
-     */
-    private String funnelValue;
+    private Integer isCanClick;
 }

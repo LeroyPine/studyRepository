@@ -1,4 +1,4 @@
-package com.leroy.practice.vo;
+package com.leroy.practice.vo.module;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,19 +16,14 @@ import lombok.NoArgsConstructor;
  *
  * @author luobs
  * @version 1.0
- * @date Created in 2020年06月17日 19:17
+ * @date Created in 2020年06月17日 15:27
  * @since 1.0
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class TableBodyVO {
-
-    /**
-     * 编码
-     */
-    private String code;
+public class TableHeaderVO {
 
     /**
      * 字段名称
@@ -36,7 +31,8 @@ public class TableBodyVO {
     private String text;
 
     /**
-     * 是否可以排序   1: 可以点击 0: 不可以点击
+     * 是否可以排序   1: 可以排序  0: 不可以排序
      */
-    private Integer isCanClick;
+    private Integer isCanSort;
+
 }

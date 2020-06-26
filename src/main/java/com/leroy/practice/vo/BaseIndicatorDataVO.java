@@ -5,8 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 /**
  * <p></p>
  * <p>
@@ -18,29 +16,23 @@ import java.util.List;
  *
  * @author luobs
  * @version 1.0
- * @date Created in 2020年06月17日 15:36
+ * @date Created in 2020年06月17日 18:28
  * @since 1.0
  */
-@Builder
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ChannelIndicatorVO {
+public class BaseIndicatorDataVO {
 
 
     /**
-     * 渠道编码
+     * 指标原子数据VO
      */
-    private String code;
+    private AtomIndicatorDataVO atomIndicatorData;
 
     /**
-     * 渠道名称
+     * 比较指标数据VO
      */
-    private String name;
-
-
-    /**
-     * 表格中每行显示的值
-     */
-    private List<String> values;
+    private CompareIndicatorDataVO compareIndicatorData;
 }
