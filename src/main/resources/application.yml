@@ -25,3 +25,9 @@ spring:
         acknowledge-mode: manual
 server:
   port: 9898
+
+evaluate:
+  submit:
+    success:
+      aasf : b
+      page-content: '{"defaultSceneCode":{"directJumpUrl":null,"nextPage":{"title":"感谢评价","subTitle":"","buttons":[{"buttonName":"","buttonUrl":""}]}},"JYPJ3":{"directJumpUrl":null}}'

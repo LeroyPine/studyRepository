@@ -5,10 +5,9 @@ import com.leroy.practice.vo.*;
 import com.leroy.practice.vo.module.*;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 import static com.google.common.collect.Lists.newArrayList;
 
@@ -28,99 +27,72 @@ import static com.google.common.collect.Lists.newArrayList;
  */
 public class Asd {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException, ParseException {
 
 
-        /*List<BaseIndicatorDataVO> baseDataList = new ArrayList<>();
-
-        List<List<Object>> a = new ArrayList<>();
-
-        a.add(newArrayList(TableHeaderVO.builder().isCanSort(1).text("表头呀").build()));
-
-        a.add(newArrayList(TableBodyVO.builder().text("表体按时").isCanClick(1).code("60001234").build()));
-
-        List<FunnelDataVO> funnelDataVOList = new ArrayList<>();
-
-        funnelDataVOList.add(FunnelDataVO.builder()
-
-                .code("zrw")
-                .text("自如网")
-                .funnelValue("32")
-                .value("24")
-                .build());
-
-
-        TableOverviewVO build = TableOverviewVO.builder()
-
-                .tableData(
-                        a
-                )
-                .title("渠道预览")
-                .updateTimeStr("更新时间2020/06/17")
-                .build();
-
-
-        baseDataList.add(BaseIndicatorDataVO.builder()
-                .atomIndicatorData(
-                        AtomIndicatorDataVO.builder()
-                                .code("tst")
-                                .name("测试")
-                                .value("4")
-                                .build())
-                .compareIndicatorData(
-                        CompareIndicatorDataVO.builder()
-                                .color("green")
-                                .direction("down")
-                                .rate("10%")
-                                .text("下降了{}")
-                                .value("10")
-                                .build()
-                )
-                .build());
-
-
-        CustomerConversionDataVO build1 = CustomerConversionDataVO.builder()
-                .baseDataList(baseDataList)
-                .channelDataList(build)
-                .funnelDataList(funnelDataVOList)
-                .build();
-
-        System.out.println(JSONObject.toJSONString(build1));
-
-        System.out.println("==========");
-
-        //    List<ChartVO> chartVOS = new ArrayList<>();
-
-        List<ChartPointVO> chartPointVOS = new ArrayList<>();
-
-        //  chartPointVOS.add(ChartPointVO.builder().a(newArrayList("12","142","24")).b(newArrayList("124124","1242")).build());
-*//*
-        chartPointVOS.add(ChartPointVO.builder().horizontalData("13").verticalData("24").build());
-
-        chartPointVOS.add(ChartPointVO.builder().horizontalData("14").verticalData("25").build());*//*
-
-
-        System.out.println(JSONObject.toJSONString(ChartVO.builder()
-                .xAxis(newArrayList("1231", "11111", "1212121", "2331245"))
-                .chartData(newArrayList(ChartDataVO.builder()
-                        .chartName("续约率")
-                        .maximum("100")
-                        .minimum("1")
-                        .yAxis(newArrayList("11", "22", "334", "342523"))
-                        .build()))
-                .build()));*/
-
-
-     /*   Double aDouble = divideToPercent(5, 19, 2);
-        System.out.println(aDouble);*/
-       // yAxisProcess(null,newArrayList(1.1D,2.D,4.D,5.D,6.2D));
-
-       String a = "'2020-03-01 00:00:00','2020-04-01 00:00:00'";
-
+       /*String a = "'2020-03-01 00:00:00','2020-04-01 00:00:00'";
+       a.wait();
         int length = a.length();
         System.out.println(length);
         String substring = a.substring(22);
-        System.out.println(substring);
+        System.out.println(substring);*/
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = sdf.parse("2020-03-01 00:00:00");
+        Date date1 = sdf.parse("2020-04-01 00:00:00");
+        Date date2 = sdf.parse("2020-05-01 00:00:00");
+        Date date3 = sdf.parse("2020-06-01 00:00:00");
+        Date date4 = sdf.parse("2020-07-01 00:00:00");
+        Date date5 = sdf.parse("2020-08-01 00:00:00");
+
+        List<RentRenewalTrendResp> renewalTrendData = new ArrayList<>();
+        renewalTrendData.add(RentRenewalTrendResp.builder()
+                .shouldExtensionCnt(BigDecimal.valueOf(400))
+                .alreadyExtensionCnt(BigDecimal.valueOf(102))
+                .businessTime(date)
+                .executionTime(new Date())
+                .build());
+        renewalTrendData.add(RentRenewalTrendResp.builder()
+                .shouldExtensionCnt(BigDecimal.valueOf(312))
+                .alreadyExtensionCnt(BigDecimal.valueOf(102))
+                .businessTime(date1)
+                .executionTime(new Date())
+                .build());
+        renewalTrendData.add(RentRenewalTrendResp.builder()
+                .shouldExtensionCnt(BigDecimal.valueOf(150))
+                .alreadyExtensionCnt(BigDecimal.valueOf(50))
+                .businessTime(date2)
+                .executionTime(new Date())
+                .build());
+        renewalTrendData.add(RentRenewalTrendResp.builder()
+                .shouldExtensionCnt(BigDecimal.valueOf(200))
+                .alreadyExtensionCnt(BigDecimal.valueOf(150))
+                .businessTime(date3)
+                .executionTime(new Date())
+                .build());
+        renewalTrendData.add(RentRenewalTrendResp.builder()
+                .shouldExtensionCnt(BigDecimal.valueOf(400))
+                .alreadyExtensionCnt(BigDecimal.valueOf(80))
+                .businessTime(date4)
+                .executionTime(new Date())
+                .build());
+        renewalTrendData.add(RentRenewalTrendResp.builder()
+                .shouldExtensionCnt(BigDecimal.valueOf(400))
+                .alreadyExtensionCnt(BigDecimal.valueOf(80))
+                .businessTime(date5)
+                .executionTime(new Date())
+                .build());
+
+
+
+        CustomerConversionResp customerConversionResp = new CustomerConversionResp();
+
+        customerConversionResp.setCstNums(BigDecimal.valueOf(300));
+        customerConversionResp.setLookCstNums(BigDecimal.valueOf(100));
+        customerConversionResp.setLookSignCstNums(BigDecimal.valueOf(50));
+        customerConversionResp.setSignCstNums(BigDecimal.valueOf(60));
+
+
     }
     private static ChartDataVO yAxisProcess(ChartDataVO chart,List<? extends Comparable> list){
 
@@ -134,4 +106,6 @@ public class Asd {
         return BigDecimal.valueOf(numerator).divide(BigDecimal.valueOf(denominator), chainScale, BigDecimal.ROUND_HALF_UP)
                 .multiply(BigDecimal.valueOf(100)).doubleValue();
     }
+
+
 }
