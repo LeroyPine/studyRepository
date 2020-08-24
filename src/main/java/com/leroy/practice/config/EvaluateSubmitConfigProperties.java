@@ -40,7 +40,7 @@ public class EvaluateSubmitConfigProperties implements InitializingBean {
 
     private String sceneDefaultCode;
 
-    private String pageContent;
+    private String pageContent ;
 
     private Map<String, EvaluateSubmitVO> submitSuccessPageContentHolder;
 
